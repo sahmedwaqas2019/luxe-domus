@@ -132,7 +132,7 @@ const ContactSection = () => {
                 <label htmlFor="phone" className="block text-sm font-medium mb-2">
                   Phone
                 </label>
-                <Input id="phone" name="phone" type="tel" placeholder="+1 (234) 567-8900" />
+                <Input id="phone" name="phone" type="tel" placeholder="+92 (000) 000-0000" />
               </div>
 
               <div>
