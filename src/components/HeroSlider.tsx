@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -66,12 +67,16 @@ const HeroSlider = () => {
                     {slide.subtitle}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button size="lg" className="bg-accent hover:bg-accent/90 text-primary">
-                      View Properties
-                    </Button>
-                    <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                      Contact Us
-                    </Button>
+                    <Link to="/gallery">
+                      <Button size="lg" className="bg-accent hover:bg-accent/90 text-primary">
+                        View Properties
+                      </Button>
+                    </Link>
+                    <Link to="/contact">
+                      <Button size="lg" variant="outline" className="border-primary-foreground  hover:bg-primary-foreground hover:text-primary">
+                        Contact Us
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </div>

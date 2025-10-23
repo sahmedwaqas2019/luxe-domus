@@ -1,3 +1,20 @@
+## Email API
+
+This project includes a minimal email sending API using Express + Nodemailer.
+
+Dev:
+
+1. Create `.env` in project root with:
+```
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_USER=your-email@example.com
+SMTP_PASS=your-app-password
+EMAIL_TO=sahmedwaqas2019@gmail.com
+```
+2. Run `npm run dev` and POST to `/api/send-email`.
+
 # Welcome to your Lovable project
 
 ## Project info

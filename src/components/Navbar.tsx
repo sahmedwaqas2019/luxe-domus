@@ -55,9 +55,11 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+            <Link to="/contact">
             <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-primary">
               Get in Touch
             </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}

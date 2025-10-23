@@ -1,26 +1,31 @@
 import { Linkedin, Mail } from "lucide-react";
+import usman from "@/assets/muhammad-usman.jpeg";
+import adeel from "@/assets/adeel.png";
+import hamza from "@/assets/hamza.jpeg";
+import nabeel from "@/assets/nabeel.jpeg" ;
+
 
 const TeamSection = () => {
   const team = [
     {
-      name: "Sarah Mitchell",
+      name: "Muhammad Usman",
       role: "CEO & Founder",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
+      image: usman,
     },
     {
-      name: "Michael Chen",
+      name: "Muhammad Adeel",
       role: "Senior Property Consultant",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80",
+      image: adeel
     },
     {
-      name: "Emma Rodriguez",
+      name: "Nabeel Ansar",
       role: "Luxury Homes Specialist",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80",
+      image: nabeel,
     },
     {
-      name: "David Thompson",
+      name: "Muhammad Hamza",
       role: "Investment Advisor",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80",
+      image: hamza
     },
   ];
 
