@@ -2,8 +2,13 @@ import express from "express";
 import cors from "cors";
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from "url";
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -63,6 +68,14 @@ app.post("/api/send-email", async (req, res) => {
     console.error("/api/send-email error", err);
     return res.status(500).json({ error: "Failed to send email" });
   }
+});
+
+// Serve static files from dist folder
+app.use(express.static(path.join(__dirname, "../dist")));
+
+// Catch-all: serve React app for client-side routing
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../dist/index.html"));
 });
 
 app.listen(PORT, () => {
