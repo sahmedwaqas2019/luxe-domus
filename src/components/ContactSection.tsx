@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail } from "lucide-react";
+import Swal from "sweetalert2";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -89,10 +90,20 @@ const ContactSection = () => {
                   body: JSON.stringify(payload),
                 });
                 if (!res.ok) throw new Error("Request failed");
-                alert("Message sent successfully");
+                Swal.fire({
+                  icon: "success",
+                  title: "Success!",
+                  text: "Your message has been sent successfully.",
+                  confirmButtonColor: "#d946ef",
+                });
                 form.reset();
               } catch (err) {
-                alert("Failed to send message");
+                Swal.fire({
+                  icon: "error",
+                  title: "Oops!",
+                  text: "Failed to send message. Please try again.",
+                  confirmButtonColor: "#d946ef",
+                });
               }
             }}>
               <div className="grid md:grid-cols-2 gap-6">
